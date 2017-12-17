@@ -1,1 +1,1 @@
-# Smart Taxi Application for Artifical Intelligence class using A*
+# Smart Taxi\nProject for Artifical Intelligence class

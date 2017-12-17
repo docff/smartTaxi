@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style type="text/css">
+		html, body { height: 100%; margin: 0; padding: 0; } #map { height: 100%; }
+    </style>
+    <script type="text/javascript">
+		var map;
+		function initMap() { 
+			var myLatLng = new google.maps.LatLng(37.9991,23.7333);
+			var mapOptions = {
+				zoom: 13,
+				center: myLatLng
+			}
+
+			map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+			var ctaLayer = new google.maps.KmlLayer('https://www.dropbox.com/s/n99g5ot7x4eg9ph/path.kml?dl=0');
+			ctaLayer.setMap(map);    	
+		}
+    </script>
+  </head>
+  <body>
+  	<h1>Χάρτης ταξί</h1>
+	<div id="map"></div>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDeGSmQ2WGjP1T01X6DJ3NOB05IrrjbMQ&callback=initMap" async defer></script>
+  </body>
+</html>
